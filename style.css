@@ -1,0 +1,1769 @@
+/* =========================================================
+   BOULEVARD VIP
+   FEUILLE DE STYLE PRINCIPALE
+   La saveur sans égale.
+========================================================= */
+
+
+/* =========================================================
+   1. VARIABLES
+========================================================= */
+
+:root {
+    --rouge: #8f0d16;
+    --rouge-fonce: #5f080e;
+    --rouge-clair: #b71924;
+
+    --or: #d9a62e;
+    --or-clair: #f0c75e;
+
+    --noir: #111111;
+    --noir-2: #1a1a1a;
+
+    --blanc: #ffffff;
+    --blanc-casse: #faf8f3;
+
+    --gris: #666666;
+    --gris-clair: #eeeeee;
+    --gris-fond: #f5f5f5;
+
+    --ombre: 0 10px 30px rgba(0, 0, 0, 0.10);
+    --ombre-forte: 0 15px 40px rgba(0, 0, 0, 0.18);
+
+    --rayon: 12px;
+    --transition: 0.3s ease;
+
+    --largeur: 1200px;
+}
+
+
+/* =========================================================
+   2. RESET GÉNÉRAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--blanc);
+    color: var(--noir);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   3. CONTENEUR PRINCIPAL
+========================================================= */
+
+.conteneur {
+    width: 90%;
+    max-width: var(--largeur);
+    margin: 0 auto;
+}
+
+.contenu-centre {
+    text-align: center;
+}
+
+
+/* =========================================================
+   4. HEADER
+========================================================= */
+
+.header {
+    width: 100%;
+    background: var(--blanc);
+    border-bottom: 1px solid #e8e8e8;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+.conteneur-header {
+    width: 92%;
+    max-width: 1300px;
+    min-height: 82px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+
+/* =========================================================
+   5. LOGO
+========================================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 90px;
+    height: 65px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   6. NAVIGATION
+========================================================= */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex: 1;
+}
+
+.navigation a {
+    position: relative;
+    padding: 10px 12px;
+
+    color: var(--noir);
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 2px;
+
+    height: 2px;
+    background: var(--or);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: var(--transition);
+}
+
+.navigation a:hover {
+    color: var(--rouge);
+}
+
+.navigation a:hover::after,
+.navigation a.actif::after {
+    transform: scaleX(1);
+}
+
+.navigation a.actif {
+    color: var(--rouge);
+}
+
+
+/* =========================================================
+   7. BOUTON COMMANDER HEADER
+========================================================= */
+
+.bouton-commande {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 20px;
+
+    background: var(--rouge);
+    color: var(--blanc);
+
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: var(--transition);
+}
+
+.bouton-commande:hover {
+    background: var(--rouge-fonce);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(143, 13, 22, 0.25);
+}
+
+
+/* =========================================================
+   8. BOUTONS GÉNÉRAUX
+========================================================= */
+
+.bouton-principal,
+.bouton-secondaire {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+    padding: 13px 25px;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.bouton-principal {
+    background: var(--rouge);
+    color: var(--blanc);
+    border: 2px solid var(--rouge);
+}
+
+.bouton-principal:hover {
+    background: var(--rouge-fonce);
+    border-color: var(--rouge-fonce);
+    transform: translateY(-3px);
+    box-shadow: var(--ombre);
+}
+
+.bouton-secondaire {
+    background: transparent;
+    color: var(--rouge);
+    border: 2px solid var(--rouge);
+}
+
+.bouton-secondaire:hover {
+    background: var(--rouge);
+    color: var(--blanc);
+    transform: translateY(-3px);
+}
+
+.actions-cta {
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   9. HERO
+========================================================= */
+
+.hero-interieur {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            rgba(40, 0, 0, 0.72),
+            rgba(40, 0, 0, 0.72)
+        ),
+        url("images/restaurant-interieur.jpg") center/cover no-repeat;
+
+    color: var(--blanc);
+    text-align: center;
+}
+
+.contenu-hero {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.contenu-hero .petit-titre {
+    color: var(--or-clair);
+}
+
+.contenu-hero h1 {
+    margin: 12px 0 20px;
+
+    font-size: clamp(38px, 6vw, 68px);
+    line-height: 1.05;
+
+    font-weight: 800;
+}
+
+.contenu-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   10. PETIT TITRE
+========================================================= */
+
+.petit-titre {
+    display: inline-block;
+
+    color: var(--rouge);
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   11. TITRES DE SECTIONS
+========================================================= */
+
+.titre-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.titre-section h2,
+.section-contact h2,
+.section-localisation h2 {
+    margin: 10px 0 15px;
+
+    color: var(--noir);
+
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.15;
+}
+
+.titre-section p,
+.section-contact p,
+.section-localisation p {
+    max-width: 750px;
+    margin: 0 auto;
+
+    color: var(--gris);
+}
+
+
+/* =========================================================
+   12. SECTIONS
+========================================================= */
+
+section {
+    width: 100%;
+}
+
+.section-contact,
+.section-localisation,
+.section-contact-principale,
+.section-acces {
+    padding: 80px 0;
+}
+
+.section-contact {
+    background: var(--blanc);
+}
+
+
+/* =========================================================
+   13. CARTES GÉNÉRALES
+========================================================= */
+
+.carte-acces,
+.bloc-localisation,
+.informations-contact,
+.formulaire-contact {
+    background: var(--blanc);
+    border: 1px solid #e9e9e9;
+    border-radius: var(--rayon);
+
+    box-shadow: var(--ombre);
+}
+
+
+/* =========================================================
+   14. LOCALISATION
+========================================================= */
+
+.section-localisation {
+    background: var(--blanc-casse);
+}
+
+.bloc-localisation {
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.localisation-contenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.informations-localisation {
+    padding: 45px;
+}
+
+.informations-localisation h2 {
+    margin: 10px 0 20px;
+    font-size: 30px;
+}
+
+.information-item {
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.information-item:last-child {
+    border-bottom: none;
+}
+
+.information-item h3 {
+    margin-bottom: 5px;
+    color: var(--rouge);
+    font-size: 17px;
+}
+
+.information-item p {
+    color: var(--gris);
+}
+
+.carte-localisation {
+    min-height: 450px;
+    background: #e8e8e8;
+}
+
+.carte-placeholder {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    text-align: center;
+    background:
+        linear-gradient(
+            135deg,
+            #eeeeee,
+            #dcdcdc
+        );
+}
+
+.carte-placeholder h3 {
+    margin-bottom: 10px;
+    color: var(--noir);
+}
+
+.carte-placeholder p {
+    max-width: 400px;
+    color: var(--gris);
+}
+
+
+/* =========================================================
+   15. ACCÈS
+========================================================= */
+
+.section-acces {
+    background: var(--blanc);
+}
+
+.grille-acces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.carte-acces {
+    padding: 30px;
+    text-align: center;
+
+    transition: var(--transition);
+}
+
+.carte-acces:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--ombre-forte);
+    border-color: rgba(217, 166, 46, 0.5);
+}
+
+.carte-acces h3 {
+    margin: 15px 0 10px;
+    color: var(--rouge);
+}
+
+.carte-acces p {
+    color: var(--gris);
+}
+
+
+/* =========================================================
+   16. MENU
+========================================================= */
+
+.menu-section {
+    padding: 75px 0;
+    background: var(--blanc);
+}
+
+.menu-section:nth-of-type(even) {
+    background: var(--blanc-casse);
+}
+
+.menu-section h2 {
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 34px;
+    color: var(--rouge);
+}
+
+.grille-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.carte-menu {
+    overflow: hidden;
+
+    background: var(--blanc);
+    border: 1px solid #e8e8e8;
+    border-radius: var(--rayon);
+
+    box-shadow: var(--ombre);
+
+    transition: var(--transition);
+}
+
+.carte-menu:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--ombre-forte);
+}
+
+.carte-menu img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.contenu-carte-menu {
+    padding: 22px;
+}
+
+.carte-menu h3 {
+    margin-bottom: 8px;
+    color: var(--noir);
+}
+
+.carte-menu p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.prix {
+    display: block;
+    margin-top: 12px;
+
+    color: var(--rouge);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   17. GALERIE
+========================================================= */
+/* =========================================================
+   GALERIE BOULEVARD VIP
+   ========================================================= */
+
+.grille-galerie {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+
+/* Chaque bloc photo */
+
+.image-galerie {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 16px;
+    background: #f2f2f2;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* L'image elle-même */
+
+.image-galerie img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+
+/* Effet au survol */
+
+.image-galerie:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   GALERIE AMBIANCE
+   ========================================================= */
+
+.grille-galerie.ambiance {
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: stretch;
+}
+
+.grille-galerie.ambiance .grande {
+    height: 400px;
+}
+
+.grille-galerie.ambiance .image-galerie:not(.grande) {
+    height: 400px;
+}
+
+
+/* =========================================================
+   TABLETTE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .grille-galerie {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .image-galerie {
+        height: 260px;
+    }
+
+    .grille-galerie.ambiance {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grille-galerie.ambiance .grande {
+        grid-column: 1 / -1;
+        height: 350px;
+    }
+
+    .grille-galerie.ambiance .image-galerie:not(.grande) {
+        height: 260px;
+    }
+}
+
+
+/* =========================================================
+   TÉLÉPHONE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .grille-galerie {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .image-galerie {
+        height: 280px;
+        border-radius: 12px;
+    }
+
+    .grille-galerie.ambiance {
+        grid-template-columns: 1fr;
+    }
+
+    .grille-galerie.ambiance .grande,
+    .grille-galerie.ambiance .image-galerie:not(.grande) {
+        height: 280px;
+    }
+}
+
+
+
+
+
+
+
+
+/* =========================================================
+   18. CONTACT
+========================================================= */
+
+.section-contact-principale {
+    background: var(--blanc-casse);
+}
+
+.contenu-contact {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.informations-contact,
+.formulaire-contact {
+    padding: 40px;
+}
+
+.informations-contact h2,
+.formulaire-contact h2 {
+    margin: 10px 0 15px;
+    font-size: 30px;
+}
+
+.informations-contact > p,
+.formulaire-contact > p {
+    margin-bottom: 25px;
+    color: var(--gris);
+}
+
+.formulaire-contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.champ-formulaire {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.champ-formulaire label {
+    color: var(--noir);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.champ-formulaire input,
+.champ-formulaire select,
+.champ-formulaire textarea {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    background: var(--blanc);
+
+    border: 1px solid #d7d7d7;
+    border-radius: 6px;
+
+    outline: none;
+
+    color: var(--noir);
+
+    transition: var(--transition);
+}
+
+.champ-formulaire textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.champ-formulaire input:focus,
+.champ-formulaire select:focus,
+.champ-formulaire textarea:focus {
+    border-color: var(--rouge);
+    box-shadow: 0 0 0 3px rgba(143, 13, 22, 0.08);
+}
+
+
+/* =========================================================
+   19. LIVRAISON
+========================================================= */
+
+.section-livraison {
+    padding: 80px 0;
+}
+
+.grille-etapes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.etape {
+    padding: 30px;
+
+    background: var(--blanc);
+    border: 1px solid #e8e8e8;
+    border-radius: var(--rayon);
+
+    text-align: center;
+
+    box-shadow: var(--ombre);
+}
+
+.etape-numero {
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--rouge);
+    color: var(--blanc);
+
+    font-weight: 800;
+}
+
+.etape h3 {
+    margin-bottom: 8px;
+}
+
+.etape p {
+    color: var(--gris);
+}
+
+
+/* =========================================================
+   20. COMMANDE
+========================================================= */
+
+.formulaire-commande {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: var(--blanc);
+
+    border-radius: var(--rayon);
+
+    box-shadow: var(--ombre-forte);
+}
+
+.formulaire-commande fieldset {
+    margin-bottom: 30px;
+    padding: 25px;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+}
+
+.formulaire-commande legend {
+    padding: 0 10px;
+
+    color: var(--rouge);
+
+    font-weight: 800;
+}
+
+.formulaire-commande label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-weight: 700;
+}
+
+.formulaire-commande input,
+.formulaire-commande select,
+.formulaire-commande textarea {
+    width: 100%;
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+
+    outline: none;
+}
+
+.formulaire-commande input:focus,
+.formulaire-commande select:focus,
+.formulaire-commande textarea:focus {
+    border-color: var(--rouge);
+}
+
+
+/* =========================================================
+   21. CTA
+========================================================= */
+
+.section-cta {
+    padding: 85px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--rouge-fonce),
+            var(--rouge)
+        );
+
+    color: var(--blanc);
+
+    text-align: center;
+}
+
+.section-cta h2 {
+    margin-bottom: 15px;
+
+    font-size: clamp(28px, 4vw, 42px);
+}
+
+.section-cta p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: #f3f3f3;
+}
+
+.section-cta .bouton-principal {
+    background: var(--or);
+    border-color: var(--or);
+    color: var(--noir);
+}
+
+.section-cta .bouton-principal:hover {
+    background: var(--or-clair);
+    border-color: var(--or-clair);
+}
+
+.section-cta .bouton-secondaire {
+    color: var(--blanc);
+    border-color: var(--blanc);
+}
+
+.section-cta .bouton-secondaire:hover {
+    background: var(--blanc);
+    color: var(--rouge);
+}
+
+
+/* =========================================================
+   22. FOOTER
+========================================================= */
+
+.footer {
+    background: var(--noir);
+    color: var(--blanc);
+}
+
+.conteneur-footer {
+    width: 90%;
+    max-width: var(--largeur);
+
+    margin: 0 auto;
+
+    padding: 65px 0 45px;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 40px;
+}
+
+.footer-colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-colonne h3 {
+    position: relative;
+
+    margin-bottom: 20px;
+
+    color: var(--or);
+
+    font-size: 16px;
+}
+
+.footer-colonne h3::after {
+    content: "";
+
+    display: block;
+
+    width: 30px;
+    height: 2px;
+
+    margin-top: 7px;
+
+    background: var(--rouge);
+}
+
+.footer-colonne p {
+    margin-bottom: 8px;
+
+    color: #bbbbbb;
+
+    font-size: 14px;
+}
+
+.footer-colonne a {
+    margin-bottom: 9px;
+
+    color: #bbbbbb;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+.footer-colonne a:hover {
+    color: var(--or);
+    transform: translateX(4px);
+}
+
+.logo-footer {
+    width: 110px;
+    height: 75px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+}
+
+.copyright {
+    padding: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    text-align: center;
+}
+
+.copyright p {
+    color: #999999;
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   23. PAGE À PROPOS
+========================================================= */
+
+.section-apropos {
+    padding: 80px 0;
+}
+
+.contenu-apropos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.contenu-apropos img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre-forte);
+}
+
+
+/* =========================================================
+   24. CARTES DE VALEURS / SPÉCIALITÉS
+========================================================= */
+
+.grille-cartes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.carte {
+    padding: 30px;
+
+    background: var(--blanc);
+
+    border: 1px solid #e8e8e8;
+    border-radius: var(--rayon);
+
+    box-shadow: var(--ombre);
+
+    transition: var(--transition);
+}
+
+.carte:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--ombre-forte);
+}
+
+.carte h3 {
+    margin-bottom: 10px;
+    color: var(--rouge);
+}
+
+.carte p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   25. RESPONSIVE — TABLETTES
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .conteneur-header {
+        min-height: auto;
+        padding: 15px 0;
+
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+
+        overflow-x: auto;
+        justify-content: flex-start;
+
+        padding-bottom: 5px;
+    }
+
+    .navigation a {
+        white-space: nowrap;
+    }
+
+    .grille-menu {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grille-acces {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grille-cartes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grille-etapes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteneur-footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   26. RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .conteneur {
+        width: 92%;
+    }
+
+    .conteneur-header {
+        width: 92%;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 55px;
+    }
+
+    .bouton-commande {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+    .navigation {
+        gap: 0;
+    }
+
+    .navigation a {
+        padding: 9px 10px;
+        font-size: 12px;
+    }
+
+
+    /* HERO */
+
+    .hero-interieur {
+        min-height: 360px;
+    }
+
+    .contenu-hero {
+        padding: 50px 15px;
+    }
+
+    .contenu-hero h1 {
+        font-size: 40px;
+    }
+
+    .contenu-hero p {
+        font-size: 16px;
+    }
+
+
+    /* SECTIONS */
+
+    .section-contact,
+    .section-localisation,
+    .section-contact-principale,
+    .section-acces,
+    .section-livraison,
+    .section-apropos {
+        padding: 60px 0;
+    }
+
+
+    /* LOCALISATION */
+
+    .localisation-contenu {
+        grid-template-columns: 1fr;
+    }
+
+    .informations-localisation {
+        padding: 30px;
+    }
+
+    .carte-localisation,
+    .carte-placeholder {
+        min-height: 330px;
+    }
+
+
+    /* CONTACT */
+
+    .contenu-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .informations-contact,
+    .formulaire-contact {
+        padding: 30px;
+    }
+
+
+    /* MENU */
+
+    .grille-menu {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* GALERIE */
+
+    .galerie-grid {
+        width: 92%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .galerie-grid img {
+        height: 190px;
+    }
+
+
+    /* ACCÈS */
+
+    .grille-acces {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CARTES */
+
+    .grille-cartes {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* LIVRAISON */
+
+    .grille-etapes {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* À PROPOS */
+
+    .contenu-apropos {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contenu-apropos img {
+        height: 300px;
+    }
+
+
+    /* FORMULAIRE */
+
+    .formulaire-commande {
+        width: 92%;
+        padding: 25px;
+    }
+
+
+    /* FOOTER */
+
+    .conteneur-footer {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 50px 0 35px;
+    }
+
+    .footer-colonne {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-colonne h3::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* =========================================================
+   27. PETITS SMARTPHONES
+========================================================= */
+
+    .actions-cta {
+        flex-direction: column;
+    }
+
+    .actions-cta a {
+        width: 100%;
+    }
+
+    .bouton-principal,
+    .bouton-secondaire {
+        width: 100%;
+    }
+
+ /* ← CETTE ACCOLADE MANQUAIT */
+
+
+/* =========================================================
+   ANIMATIONS JAVASCRIPT
+   ========================================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ANIMATIONS JAVASCRIPT
+   ========================================================= */
+
+/* Apparition au scroll */
+
+.carte,
+.carte-menu,
+.carte-acces,
+.etape,
+.contenu-apropos,
+.section-cta,
+.bloc-localisation,
+.galerie-grid img,
+.information-item,
+.formulaire-contact,
+.formulaire-commande {
+    opacity: 0;
+    transform: translateY(30px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.apparition {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+/* =========================================================
+   HEADER AU SCROLL
+   ========================================================= */
+
+.header {
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease,
+        padding 0.3s ease;
+}
+
+.header.header-scrolle {
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   BOUTON MENU MOBILE
+   ========================================================= */
+
+.bouton-menu-mobile {
+    display: none;
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: var(--rouge);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bouton-menu-mobile span {
+    display: block;
+    height: 2px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   RETOUR EN HAUT
+   ========================================================= */
+
+.retour-haut {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: var(--rouge);
+    color: white;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+
+    z-index: 999;
+}
+
+.retour-haut.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.retour-haut:hover {
+    background: var(--or);
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   GALERIE / LIGHTBOX
+   ========================================================= */
+
+.visionneuse {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.92);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 5000;
+}
+
+.visionneuse.ouverte {
+    opacity: 1;
+    visibility: visible;
+}
+
+.visionneuse img {
+    max-width: 90%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.fermer-visionneuse {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: var(--rouge);
+
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.legende-visionneuse {
+    position: absolute;
+    bottom: 20px;
+
+    color: white;
+    text-align: center;
+}
+
+
+/* =========================================================
+   MESSAGE FORMULAIRE
+   ========================================================= */
+
+.message-site {
+    position: fixed;
+
+    right: 25px;
+    bottom: 90px;
+
+    max-width: 380px;
+
+    padding: 16px 20px;
+
+    border-radius: 10px;
+
+    color: white;
+
+    transform: translateX(120%);
+
+    transition:
+        transform 0.4s ease;
+
+    z-index: 6000;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.message-site.message-visible {
+    transform: translateX(0);
+}
+
+.message-site.succes {
+    background: #198754;
+}
+
+.message-site.erreur {
+    background: #b71924;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .bouton-menu-mobile {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        background: white;
+
+        padding: 20px;
+
+        display: none;
+
+        box-shadow:
+            0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .navigation.menu-ouvert {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigation a {
+        padding: 12px 5px;
+    }
+
+    .retour-haut {
+        right: 15px;
+        bottom: 15px;
+    }
+
+    .visionneuse {
+        padding: 20px;
+    }
+
+    .visionneuse img {
+        max-width: 95%;
+        max-height: 75vh;
+    }
+
+    .message-site {
+        left: 15px;
+        right: 15px;
+        bottom: 75px;
+        max-width: none;
+    }
+}
+
+
+
+
+
+
+
+/* =========================================================
+   PHOTOS - LIVRAISON
+   ========================================================= */
+
+.images-livraison {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    width: 100%;
+}
+
+.images-livraison .image-livraison {
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #f3f3f3;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.images-livraison .image-livraison img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.45s ease;
+}
+
+.images-livraison .image-livraison:hover img {
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px) {
+
+    .images-livraison {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .images-livraison .image-livraison {
+        height: 300px;
+        border-radius: 15px;
+    }
+
+}

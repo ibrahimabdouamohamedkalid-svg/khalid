@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Commander | Boulevard VIP</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         EN-TÊTE / NAVIGATION
+    ========================== -->
+
+    <header class="header">
+
+        <div class="conteneur-header">
+
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+
+                <img src="logo-boulevard-vip.jpg"
+                     alt="logo-boulevard-vip.jpg">
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="navigation">
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="apropos.html">
+                    À propos
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="galerie.html">
+                    Galerie
+                </a>
+
+                <a href="livraison.html">
+                    Livraison
+                </a>
+
+                <a href="localisation.html">
+                    Localisation
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Bouton commande -->
+
+            <a href="commande.html"
+               class="bouton-commande actif">
+
+                Commander
+
+            </a>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENU PRINCIPAL
+    ========================== -->
+
+    <main>
+
+
+        <!-- =========================
+             BANNIÈRE
+        ========================== -->
+
+        <section class="hero-interieur">
+
+            <div class="contenu-hero">
+
+                <span class="petit-titre">
+                    BOULEVARD VIP
+                </span>
+
+                <h1>
+                    Passez votre commande
+                </h1>
+
+                <p>
+                    Faites votre choix et indiquez les
+                    informations nécessaires à votre commande.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INTRODUCTION
+        ========================== -->
+
+        <section class="section-commande">
+
+            <div class="conteneur">
+
+                <div class="contenu-centre">
+
+                    <span class="petit-titre">
+                        COMMANDE
+                    </span>
+
+                    <h2>
+                        Commandez vos spécialités préférées
+                    </h2>
+
+                    <p>
+                        Sélectionnez vos produits, indiquez
+                        les quantités souhaitées puis renseignez
+                        vos informations pour votre commande.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FORMULAIRE DE COMMANDE
+        ========================== -->
+
+        <section class="formulaire-commande">
+
+            <div class="conteneur">
+
+
+                <form action="#" method="post">
+
+
+                    <!-- =====================
+                         INFORMATIONS CLIENT
+                    ====================== -->
+
+                    <div class="bloc-formulaire">
+
+                        <div class="titre-formulaire">
+
+                            <span class="petit-titre">
+                                ÉTAPE 1
+                            </span>
+
+                            <h2>
+                                Vos informations
+                            </h2>
+
+                        </div>
+
+
+                        <!-- Nom -->
+
+                        <div class="champ">
+
+                            <label for="nom">
+                                Nom complet
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nom"
+                                name="nom"
+                                placeholder="Votre nom complet"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Téléphone -->
+
+                        <div class="champ">
+
+                            <label for="telephone">
+                                Numéro de téléphone
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="telephone"
+                                name="telephone"
+                                placeholder="Votre numéro de téléphone"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Adresse -->
+
+                        <div class="champ">
+
+                            <label for="adresse">
+                                Adresse de livraison
+                            </label>
+
+                            <textarea
+                                id="adresse"
+                                name="adresse"
+                                rows="4"
+                                placeholder="Indiquez votre adresse de livraison"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         CHOIX DU PRODUIT
+                    ====================== -->
+
+                    <div class="bloc-formulaire">
+
+                        <div class="titre-formulaire">
+
+                            <span class="petit-titre">
+                                ÉTAPE 2
+                            </span>
+
+                            <h2>
+                                Votre commande
+                            </h2>
+
+                        </div>
+
+
+                        <!-- Catégorie -->
+
+                        <div class="champ">
+
+                            <label for="categorie">
+                                Catégorie
+                            </label>
+
+                            <select
+                                id="categorie"
+                                name="categorie"
+                                required
+                            >
+
+                                <option value="">
+                                    Sélectionnez une catégorie
+                                </option>
+
+                                <option value="burgers">
+                                    Burgers
+                                </option>
+
+                                <option value="pizzas">
+                                    Pizzas
+                                </option>
+
+                                <option value="sandwiches">
+                                    Sandwiches
+                                </option>
+
+                                <option value="shawarmas">
+                                    Shawarmas
+                                </option>
+
+                                <option value="tacos">
+                                    Tacos
+                                </option>
+
+                                <option value="poulet">
+                                    Poulet frit
+                                </option>
+
+                                <option value="happy-meal">
+                                    Happy Meal
+                                </option>
+
+                                <option value="salades">
+                                    Salades
+                                </option>
+
+                                <option value="frites-riz">
+                                    Frites & riz
+                                </option>
+
+                                <option value="boissons">
+                                    Boissons
+                                </option>
+
+                                <option value="glaces">
+                                    Glaces
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <!-- Produit -->
+
+                        <div class="champ">
+
+                            <label for="produit">
+                                Produit souhaité
+                            </label>
+
+                            <input
+                                type="text"
+                                id="produit"
+                                name="produit"
+                                placeholder="Nom du produit"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Quantité -->
+
+                        <div class="champ">
+
+                            <label for="quantite">
+                                Quantité
+                            </label>
+
+                            <input
+                                type="number"
+                                id="quantite"
+                                name="quantite"
+                                min="1"
+                                value="1"
+                                required
+                            >
+
+                        </div>
+
+
+                        <!-- Commentaire -->
+
+                        <div class="champ">
+
+                            <label for="commentaire">
+                                Précisions sur la commande
+                            </label>
+
+                            <textarea
+                                id="commentaire"
+                                name="commentaire"
+                                rows="4"
+                                placeholder="Exemple : sans oignon, sauce supplémentaire..."
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         MODE DE RÉCEPTION
+                    ====================== -->
+
+                    <div class="bloc-formulaire">
+
+                        <div class="titre-formulaire">
+
+                            <span class="petit-titre">
+                                ÉTAPE 3
+                            </span>
+
+                            <h2>
+                                Mode de réception
+                            </h2>
+
+                        </div>
+
+
+                        <div class="champ">
+
+                            <label for="reception">
+                                Comment souhaitez-vous recevoir
+                                votre commande ?
+                            </label>
+
+                            <select
+                                id="reception"
+                                name="reception"
+                                required
+                            >
+
+                                <option value="">
+                                    Sélectionnez une option
+                                </option>
+
+                                <option value="livraison">
+                                    Livraison
+                                </option>
+
+                                <option value="sur-place">
+                                    Sur place
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         MOYEN DE CONTACT
+                    ====================== -->
+
+                    <div class="bloc-formulaire">
+
+                        <div class="titre-formulaire">
+
+                            <span class="petit-titre">
+                                ÉTAPE 4
+                            </span>
+
+                            <h2>
+                                Confirmation
+                            </h2>
+
+                        </div>
+
+
+                        <div class="champ">
+
+                            <label for="contact-preferentiel">
+                                Moyen de contact souhaité
+                            </label>
+
+                            <select
+                                id="contact-preferentiel"
+                                name="contact-preferentiel"
+                            >
+
+                                <option value="">
+                                    Sélectionnez une option
+                                </option>
+
+                                <option value="telephone">
+                                    Appel téléphonique
+                                </option>
+
+                                <option value="whatsapp">
+                                    WhatsApp
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="champ">
+
+                            <label for="message">
+
+                                Message supplémentaire
+
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="5"
+                                placeholder="Une information supplémentaire à nous communiquer ?"
+                            ></textarea>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =====================
+                         BOUTONS
+                    ====================== -->
+
+                    <div class="actions-formulaire">
+
+                        <button
+                            type="submit"
+                            class="bouton-principal">
+
+                            Envoyer ma commande
+
+                        </button>
+
+
+                        <a
+                            href="menu.html"
+                            class="bouton-secondaire">
+
+                            Retour au menu
+
+                        </a>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RAPPEL
+        ========================== -->
+
+        <section class="section-cta">
+
+            <div class="conteneur">
+
+                <h2>
+                    Une question avant de commander ?
+                </h2>
+
+                <p>
+                    Consultez notre page Contact pour
+                    obtenir les informations nécessaires.
+                </p>
+
+                <a
+                    href="contact.html"
+                    class="bouton-principal">
+
+                    Nous contacter
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================
+         PIED DE PAGE
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="conteneur-footer">
+
+
+            <!-- Présentation -->
+
+            <div class="footer-colonne">
+
+                <img
+                    src="logo-boulevard-vip.jpg"
+                    alt="logo-boulevard-vip.jpg"
+                    class="logo-footer"
+                >
+
+                <p>
+                    Boulevard VIP
+                </p>
+
+                <p>
+                    La saveur sans égale.
+                </p>
+
+            </div>
+
+
+
+            <!-- Navigation -->
+
+            <div class="footer-colonne">
+
+                <h3>
+                    Navigation
+                </h3>
+
+                <a href="index.html">
+                    Accueil
+                </a>
+
+                <a href="apropos.html">
+                    À propos
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="galerie.html">
+                    Galerie
+                </a>
+
+                <a href="livraison.html">
+                    Livraison
+                </a>
+
+                <a href="localisation.html">
+                    Localisation
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- Spécialités -->
+
+            <div class="footer-colonne">
+
+                <h3>
+                    Nos spécialités
+                </h3>
+
+                <p>
+                    Burgers
+                </p>
+
+                <p>
+                    Pizzas
+                </p>
+
+                <p>
+                    Sandwiches
+                </p>
+
+                <p>
+                    Shawarmas
+                </p>
+
+                <p>
+                    Tacos
+                </p>
+
+                <p>
+                    Glaces
+                </p>
+
+            </div>
+
+
+
+            <!-- Commander -->
+
+            <div class="footer-colonne">
+
+                <h3>
+                    Boulevard VIP
+                </h3>
+
+                <p>
+                    Découvrez nos spécialités et
+                    passez votre commande.
+                </p>
+
+                <a
+                    href="commande.html"
+                    class="bouton-commande">
+
+                    Commander
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Copyright -->
+
+        <div class="copyright">
+
+            <p>
+                © 2026 Boulevard VIP — Tous droits réservés. <br>Crée par M.kalid -
+                créateur d'impact.
+            </p>
+
+        </div>
+
+
+    </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>
